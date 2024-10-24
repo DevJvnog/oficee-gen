@@ -1,0 +1,211 @@
+/* Estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #6c6c6e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-list li a:hover{
+  font-weight: bold;
+  transform: scaleY(1);
+  color: #ffd700;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+#home {
+  height: 100vh;
+  background: url('./pexels-chris-howard-229664-755298.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  color: #fff;
+  text-align: start;
+}
+
+#home h1 {
+  font-size: 3rem;
+}
+
+.home-content{
+  margin-bottom: 50px;
+  margin-left: 10px;
+  padding-left: 10px;
+  width: 50%;
+  
+}
+
+#home p {
+  font-size: 1.2rem;
+}
+
+/* Seção Serviços */
+.servicos {
+  padding: 20px 0;
+  background-color: #0f3460;;
+}
+
+.servicos h2 {
+  text-align: center;
+  color: #ffd700;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: auto;
+}
+
+.card {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  display: flex;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* Card 1 e Card 3: Imagem à esquerda (flex-start) */
+.card.start {
+  flex-direction: row;
+}
+
+.card.start img {
+  order: 1; /* Imagem à esquerda */
+}
+
+.card.start .card-content {
+  order: 2; /* Texto à direita */
+}
+
+/* Card 2 e Card 4: Texto à esquerda, imagem à direita (flex-end) */
+.card.end {
+  flex-direction: row-reverse;
+}
+
+.card.end img {
+  order: 1; /* Imagem à direita */
+}
+
+.card.end .card-content {
+  order: 2; /* Texto à esquerda */
+}
+
+.card img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  
+}
+
+.card-content {
+  padding: 20px;
+  width: auto;
+}
+
+.card h2 {
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.card .data {
+  color: #ffd700;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.localizacao-content {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+#localizacao h2{
+  text-align: center;
+  color: #0f3460;
+  margin-bottom: 10px;
+}
+
+
+#contato {
+  padding: 50px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+#contato h2{
+  text-align: center;
+  color: #0f3460;
+  margin-bottom: 40px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card img, .card-content {
+    width: 100%;
+  }
+}

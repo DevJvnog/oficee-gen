@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Responsivo com Animações</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Biblioteca AOS para animações -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+  <!-- Navegação -->
+  <header>
+    <nav>
+      <div class="logo">
+        <span>LOGO</span>
+      </div>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#servicos"><i class="fas fa-wrench"></i> Serviços</a></li>
+        <li><a href="#localizacao"><i class="fas fa-map-marker-alt"></i> Localização</a></li>
+        <li><a href="#contato"><i class="fas fa-phone"></i> Contato</a></li>
+      </ul>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Seção Home -->
+  <section id="home">
+    <div class="home-content">
+      <h1>Quem Somos</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, voluptate officia? Doloremque tempore accusantium sequi ipsam. Minus doloribus dolorum, iure repellendus quisquam sit itaque consequatur quam placeat corporis optio autem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem adipisci velit iure illo porro a, magni repellat provident accusantium? Eius asperiores quia laborum officiis minus amet assumenda vel reprehenderit unde?
+      </p>
+    </div>
+  </section>
+
+  <!-- Seção Serviços -->
+  <section id="servicos" class="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="cards">
+      <div class="card" data-aos="fade-up">
+        <img src="https://picsum.photos/200/300" alt="Serviço 1">
+        <div class="card-content">
+          <h2>Serviço 1</h2>
+          <p class="data">Data: 24 de Outubro, 2024</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="card reverse" data-aos="fade-left">
+        <div class="card-content">
+          <h2>Serviço 2</h2>
+          <p class="data">Data: 25 de Outubro, 2024</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <img src="https://picsum.photos/200/300" alt="Serviço 2">
+      </div>
+      <div class="card" data-aos="fade-right">
+        <img src="https://picsum.photos/200/300" alt="Serviço 3">
+        <div class="card-content">
+          <h2>Serviço 3</h2>
+          <p class="data">Data: 26 de Outubro, 2024</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="card reverse" data-aos="fade-up">
+        <div class="card-content">
+          <h2>Serviço 4</h2>
+          <p class="data">Data: 27 de Outubro, 2024</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <img src="https://picsum.photos/200/300" alt="Serviço 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Localização -->
+  <section id="localizacao" data-aos="fade-up">
+    <h2>Localização</h2>
+    <div class="localizacao-content">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.1638604546357!2d-46.653225284374015!3d-23.56423356789064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b8ecf1f205%3A0x1c622f7444e3144!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1631316053479!5m2!1spt-BR!2sus" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" data-aos="fade-right"></iframe>
+      <div class="endereco">
+        <p>Av. Paulista, São Paulo - SP, Brasil</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <form action="https://formsubmit.co/seu-email-aqui" method="POST">
+      <input type="hidden" name="_next" value="obrigado.html">
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
